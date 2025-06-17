@@ -1,3 +1,6 @@
 import { test } from '@playwright/test';
 
-test('How to apply dynamic wait ')
+test('How to apply dynamic wait ', async function ({ page }) {
+    await page.goto("");
+
+});
