@@ -22,7 +22,7 @@ test('Assertion for checking the radio button is checked or not',async function(
 
 });
 
-test.only ('Checking whether the terms check box functionality',async function({page}){
+test('Checking whether the terms check box functionality',async function({page}){
     const url = 'https://rahulshettyacademy.com/loginpagePractise/';
     page.goto(url);
 

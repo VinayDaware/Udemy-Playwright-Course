@@ -1,17 +1,17 @@
-import {expect, test} from '@playwright/test';
+import {test,expect} from '@playwright/test';
 
-test('Static or select dropdown dropdown test',async function({page}){
-    // the dropdown which has static values known as ststic or select dropdown
-
+test('Handling child windows & tabs with playwright using browser context', async function({page})
+{
     const url = 'https://rahulshettyacademy.com/loginpagePractise/';
-    await page.goto(url);
-
+    page.goto(url);
     const userNameField = page.locator('#username');
     const passField = page.locator('#password');
     const signInBtn = page.locator('#signInBtn');
     const dropDown = page.locator('select.form-control');
     const userRadio = page.locator('span.checkmark').last();
     const alertOkayBtn = page.locator('#okayBtn');
+    const termsCheckBox = page.locator('#terms');
+    await termsCheckBox.click();
 
     // selecting the value from dropdown
     await dropDown.selectOption('consult'); // selectOption method is used to select the value from dropDown. Parameter should be value.
@@ -27,7 +27,6 @@ test('Static or select dropdown dropdown test',async function({page}){
     await expect(userRadio).toBeChecked();
     
 
-
-
+    // terminal command ---- > npx playwright test fileName --debug
 
 });

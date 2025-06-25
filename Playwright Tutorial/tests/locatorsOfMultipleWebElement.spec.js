@@ -7,6 +7,7 @@ test('working with multiple webelement locator', async function({page}){
     const passwordField = await page.locator('[type="password"]');
     const signInBtn = await page.locator('#signInBtn');
     const cardTiles = await page.locator('.card-body a');
+    const checkBox = await page.locator('#terms');
 
     // transversing / location element from parent to child for this we have nth method where we can set the positon of the element that means nth index the value is in indexing e.g for first element nth(0) for second nth(1);
 
@@ -41,7 +42,7 @@ test('Check and uncheck terms check box', async function({page}){
         console.log("Terms are not accepted");
 });
 
-test.only('Extracting all product list after signing in', async function({page}){
+test('Extracting all product list after signing in', async function({page}){
         const url = 'https://rahulshettyacademy.com/loginpagePractise/';
         await page.goto(url);
         const userNameField = await page.locator('#username');
