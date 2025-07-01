@@ -34,9 +34,7 @@ test('Performing test using get by role locator',async function({page}){
 
 
 test('Performing test using get by text locator',async function({page}){
-    const url = 'https://rahulshettyacademy.com/angularpractice/';
-    await page.goto(url);
-        const url = 'https://rahulshettyacademy.com/angularpractice/';
+    const url = 'https://rahulshettyacademy.com/angularpractice/' ;
     await page.goto(url);
     const nameField = page.locator('[name="name"]'); 
     await nameField.first().fill('Vinay');
