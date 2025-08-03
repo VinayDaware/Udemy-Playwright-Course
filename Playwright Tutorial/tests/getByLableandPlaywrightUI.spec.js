@@ -1,9 +1,9 @@
-import {test} from '@playwright/test';
+import { test } from '@playwright/test';
 
-test('Playwright special locators',async function({page}){
+test('Playwright special locators', async function ({ page }) {
     const url = 'https://rahulshettyacademy.com/angularpractice/';
     await page.goto(url);
-    const nameField = page.locator('[name="name"]'); 
+    const nameField = page.locator('[name="name"]');
     await nameField.first().fill('Vinay');
 
     const emailField = page.locator('[name="email"]');
@@ -24,10 +24,6 @@ test('Playwright special locators',async function({page}){
 
     const bday = page.locator('[name="bday"]');
     await bday.pressSequentially('26061995');
-
-
-
-
 
 
 

@@ -1,9 +1,9 @@
-import{test} from '@playwright/test';
-test('Performing test using get by role locator',async function({page}){
+import { test } from '@playwright/test';
+test('Performing test using get by role locator', async function ({ page }) {
 
     const url = 'https://rahulshettyacademy.com/angularpractice/';
     await page.goto(url);
-    const nameField = page.locator('[name="name"]'); 
+    const nameField = page.locator('[name="name"]');
     await nameField.first().fill('Vinay');
 
     const emailField = page.locator('[name="email"]');
@@ -26,17 +26,16 @@ test('Performing test using get by role locator',async function({page}){
     await bday.pressSequentially('26061995');
 
     //getByRole() method is used to identify the element using its accessibility role
-    const submitBtn = page.getByRole("button",{name : 'Submit'});
+    const submitBtn = page.getByRole("button", { name: 'Submit' });
     await submitBtn.click();
 
 
 });
 
-
-test('Performing test using get by text locator',async function({page}){
-    const url = 'https://rahulshettyacademy.com/angularpractice/' ;
+test('Performing test using get by text locator', async function ({ page }) {
+    const url = 'https://rahulshettyacademy.com/angularpractice/';
     await page.goto(url);
-    const nameField = page.locator('[name="name"]'); 
+    const nameField = page.locator('[name="name"]');
     await nameField.first().fill('Vinay');
 
     const emailField = page.locator('[name="email"]');
@@ -58,18 +57,17 @@ test('Performing test using get by text locator',async function({page}){
     const bday = page.locator('[name="bday"]');
     await bday.pressSequentially('26061995');
 
-    const submitBtn = page.getByRole("button",{name : 'Submit'});
+    const submitBtn = page.getByRole("button", { name: 'Submit' });
     await submitBtn.click();
 
     //getByText() is method used to identify an element based on visible inner text
     const successMsg = page.getByText(' The Form has been submitted successfully!.');
-   console.log(await successMsg.textContent());
+    console.log(await successMsg.textContent());
 
 
 });
 
-
-test('Performing test using get by placeholder locator',async function({page}){
+test('Performing test using get by placeholder locator', async function ({ page }) {
     const url = 'https://rahulshettyacademy.com/angularpractice/';
     await page.goto(url);
 
@@ -77,8 +75,16 @@ test('Performing test using get by placeholder locator',async function({page}){
     const passField = page.getByPlaceholder('Password');
     await passField.fill('Test@1234');
 
+});
+
+test.only('Clicking on Shop link using role', async function ({ page }) {
+    const url = 'https://rahulshettyacademy.com/angularpractice/';
+    await page.goto(url);
+    await page.getByRole("link", { name: "Shop" }).click();
+
+    // filter() method used in playwright directly on lacator to filter element based on condition like hasText,has etc.
+    await page.locator("app-card").filter({ hasText: 'Nokia Edge' }).getByRole("button").click();
+    await page.locator("span.sr-only").first().click();
 
 
 });
-
-
