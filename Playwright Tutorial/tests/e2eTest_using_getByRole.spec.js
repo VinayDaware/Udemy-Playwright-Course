@@ -53,9 +53,5 @@ test('End to end test scenarios with getByRole,getByText conjuction with filter 
     const actordersPageUrl = await page.url();
     console.log(actordersPageUrl);
     await expect(page).toHaveURL(expordersPageUrl);
-
-
-
-
 });
 
