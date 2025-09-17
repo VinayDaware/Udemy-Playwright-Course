@@ -39,7 +39,8 @@ test('Login with valid credentials,adding item to cart and validating item in ca
 
     // asertion for checking correct item added to cart
 
-    await page.locator("div li").first().waitFor(); // we use wait here because isVisible method does not support auto wait mechanism
+    await page.locator("div li").first().waitFor();
+    // we use wait here because isVisible method does not support auto wait mechanism
     const checkProduct = await page.locator("h3:has-text('ADIDAS ORIGINAL')").isVisible();
 
     // h3 is tag name and identifying the product name based on that,isVisible method is check whether the element is Visible
