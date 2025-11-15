@@ -133,4 +133,6 @@ test('Login with valid credentials,adding item to cart and validating item in ca
     const orderIDDetails = await page.locator('.col-text').textContent();
     expect(orderID.includes(orderIDDetails)).toBeTruthy();
 
+
+
 });
