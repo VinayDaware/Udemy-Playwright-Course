@@ -1,11 +1,11 @@
-import { test,request,expect } from '@playwright/test';
+import { test, request, expect } from '@playwright/test';
 
 const loginPayload = { userEmail: "vinaydaware@gmail.com", userPassword: "Test@1234" };
 let authToken;
 let orderID;
-const orderPayload = {orders: [{country: "Cuba", productOrderedId: "68a961719320a140fe1ca57c"}]};
+const orderPayload = { orders: [{ country: "Cuba", productOrderedId: "68a961719320a140fe1ca57c" }] };
 test.beforeAll(async function () {
-// Login API
+    // Login API
     // request.newContext() creates a new API session
     const apiContext = await request.newContext();
 
@@ -31,23 +31,23 @@ test.beforeAll(async function () {
     } else {
         console.log('Login failed')
     };
-    const orderResponse = await apiContext.post('https://rahulshettyacademy.com/api/ecom/order/create-order',{
-    data : orderPayload,
-    headers:{
-        'Authorization' : authToken,
-        'Content-Type' : 'application/json'
-    },
-})
-const orderResponseJson = await orderResponse.json();
-console.log(orderResponseJson);
-orderID = await orderResponseJson.orders[0];
+    const orderResponse = await apiContext.post('https://rahulshettyacademy.com/api/ecom/order/create-order', {
+        data: orderPayload,
+        headers: {
+            'Authorization': authToken,
+            'Content-Type': 'application/json'
+        },
+    })
+    const orderResponseJson = await orderResponse.json();
+    console.log(orderResponseJson);
+    orderID = await orderResponseJson.orders[0];
 
 });
 
 test('Place order using API', async function ({ page }) {
-    await page.addInitScript(value=>{
-        window.localStorage.setItem('token',value);
-    },authToken);
+    await page.addInitScript(value => {
+        window.localStorage.setItem('token', value);
+    }, authToken);
 
     const url = 'https://rahulshettyacademy.com/client/';
     await page.goto(url);
