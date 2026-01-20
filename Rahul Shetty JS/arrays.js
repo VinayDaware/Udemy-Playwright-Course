@@ -104,3 +104,21 @@ console.log(result5);
 // Positive Index 9 - a -> Negative Index - -3
 // Positive Index 10 - r-> Negative Index - -2
 // Positive Index 11 - e -> Negative Index - -1
+
+// *******  Iterating through Arraay using for loop **********
+
+console.log("Printing array element - Kia Cars");
+let kiaCars = ["Seltos", "Carens", "Syros", "Carnival", "Sonet"];
+let totalCars = kiaCars.length;
+for (let i = 0; i < totalCars; i++) {
+    console.log(kiaCars[i]);
+}
+
+// ******* Sum of element in present ********
+console.log("Sum of array element");
+let arrayElem = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+let sum = 0;
+for (let i = 0; i < arrayElem.length; i++) {
+    sum = sum + arrayElem[i];
+}
+console.log(sum);

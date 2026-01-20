@@ -10,10 +10,10 @@ else {
 
 // Checking given number is odd or even number
 let num = 7;
-if(num%2===0){
-    console.log(num+ " Is even number")
-}else{
-    console.log(num+" is an odd number")
+if (num % 2 === 0) {
+    console.log(num + " Is even number")
+} else {
+    console.log(num + " is an odd number")
 }
 
 
@@ -36,8 +36,8 @@ for (let i = 1; i <= 5; i++) {
 
 // printing even numbers from 1 to 20
 console.log("Printing even numbers")
-for(let k = 0;k<=20;k++ ){
-    if(k%2==0){
+for (let k = 0; k <= 20; k++) {
+    if (k % 2 == 0) {
         console.log(k)
     }
 }
@@ -46,15 +46,15 @@ for(let k = 0;k<=20;k++ ){
 // printing odd and even numbers from 1 to 20
 let range = 20;
 console.log("Printing even numbers");
-for(let i = 1;i<=range;i++){
-    if(i%2===0){
+for (let i = 1; i <= range; i++) {
+    if (i % 2 === 0) {
         console.log(i);
     }
 }
 console.log("Printing odd numbers");
 
-for(let i = 1;i<=range;i++){
-    if(i%2!=0){
+for (let i = 1; i <= range; i++) {
+    if (i % 2 != 0) {
         console.log(i);
     }
 }
@@ -62,8 +62,8 @@ for(let i = 1;i<=range;i++){
 
 console.log("****Printing multiple of 2 & 5 in between 1 to 20****");
 
-for(let k = 1;k<=20;k++){
-    if(k%2==0 && k%5==0){
+for (let k = 1; k <= 20; k++) {
+    if (k % 2 == 0 && k % 5 == 0) {
         console.log(k);
     }
 }
@@ -71,8 +71,8 @@ for(let k = 1;k<=20;k++){
 
 console.log("****Printing multiple of 2 or 5 in between 1 to 50****");
 
-for(let k = 1;k<=50;k++){
-    if(k%2==0 || k%5==0){
+for (let k = 1; k <= 50; k++) {
+    if (k % 2 == 0 || k % 5 == 0) {
         console.log(k);
     }
 }
