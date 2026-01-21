@@ -44,6 +44,7 @@ console.log("Printing empid after removing - " + empid);
 // How to find an index position of an element in an array --> using indexOf() method we can find an index position of an element in an array
 let names = ["Karan", "Arjun", "Shyam"];
 let indexPosition = names.indexOf("Shyam");
+
 console.log("Index position of an element is - " + indexPosition);
 
 // How to find the element is present in the array or not --> using includes method wecan find the element is present in the array or not. It returns true if present else false
@@ -114,7 +115,6 @@ for (let i = 0; i < totalCars; i++) {
     console.log(kiaCars[i]);
 }
 
-// ******* Sum of element in present ********
 console.log("Sum of array element");
 let arrayElem = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 let sum = 0;
@@ -122,3 +122,8 @@ for (let i = 0; i < arrayElem.length; i++) {
     sum = sum + arrayElem[i];
 }
 console.log(sum);
+
+console.log("Index position of an element is - "+indexPosition); 
+
+// How to find the element is present in the array or not -->
+
