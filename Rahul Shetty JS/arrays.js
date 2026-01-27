@@ -1,3 +1,4 @@
+
 // How to declare array
 // first way
 let marks = new Array(50, 60, 70, 80);
@@ -115,7 +116,7 @@ for (let i = 0; i < totalCars; i++) {
     console.log(kiaCars[i]);
 }
 
-console.log("Sum of array element");
+console.log("Sum of array element using for loop");
 let arrayElem = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 let sum = 0;
 for (let i = 0; i < arrayElem.length; i++) {
@@ -123,7 +124,59 @@ for (let i = 0; i < arrayElem.length; i++) {
 }
 console.log(sum);
 
-console.log("Index position of an element is - "+indexPosition); 
+// sum of an array using reduce => reduce method combines an array values into single value.
+console.log("Sum of array element using reduce method");
+const total = arrayElem.reduce((sum, elem) => sum + elem, 0);
+console.log(total);
 
-// How to find the element is present in the array or not -->
+// printing even nunbers from array and createing new array using for loop
+console.log("printing even nunbers from array and createing new array using for loop");
+const score = [12, 13, 14, 15, 16, 17, 18, 19, 20];
+const evenNumbers = [];
+for (let i = 0; i < score.length; i++) {
+    if (score[i] % 2 == 0) {
+        evenNumbers.push(score[i]);
+    }
+}
+console.log(evenNumbers);
 
+// printing even nunbers from array and createing new array using filter method
+// filter() returns a new array containing elements that satisfy the given condition.We used filter method when we want to filter an array based upon an certain condition
+
+console.log("printing even nunbers from array and createing new array using filter method");
+const newEvenNumbersArray = score.filter(score => score % 2 == 0);
+console.log(newEvenNumbersArray);
+
+
+// map method => map method modifies each & every element in array and returns a new array with the same length.
+
+console.log("Multiplying each array element by 5 using map method");
+let numbers = [10, 20, 30, 40, 50, 60, 75];
+let newMappedArray = numbers.map(numbers => numbers * 5);
+console.log(newMappedArray);
+
+
+
+// Sorting of an array => sort() method is use to sort an array in specific order
+
+// Type 1 - Sorting of String array
+let countries = ["India", "United States of America", "Russia", "Japan", "Afganistan"];
+
+// ascending order sorting
+countries.sort();
+console.log(countries);
+
+// decending order sorting
+countries.sort().reverse();
+console.log(countries);
+
+// Type 2 - Sorting of numbers array
+
+let runs = [100, 150, 120, 99, 15, 20, 63, 65, 183];
+// ascending order sorting
+runs.sort((a, b) => a - b);  // comparator function => subtracting 2nd value from 1st
+console.log(runs);
+
+// decending order sorting
+runs.sort((a, b) => b - a);
+console.log(runs);
