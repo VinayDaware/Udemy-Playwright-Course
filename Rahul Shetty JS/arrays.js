@@ -175,8 +175,8 @@ console.log(countries);
 let runs = [100, 150, 120, 99, 15, 20, 63, 65, 183];
 // ascending order sorting
 runs.sort((a, b) => a - b);  // comparator function => subtracting 2nd value from 1st
-console.log(runs);
 
 // decending order sorting
 runs.sort((a, b) => b - a);
 console.log(runs);
+
