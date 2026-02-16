@@ -179,4 +179,3 @@ runs.sort((a, b) => a - b);  // comparator function => subtracting 2nd value fro
 // decending order sorting
 runs.sort((a, b) => b - a);
 console.log(runs);
-
