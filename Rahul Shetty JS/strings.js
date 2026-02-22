@@ -1,5 +1,7 @@
 // Strings and its methods
 
+const { start } = require("node:repl");
+
 // 1. length property --> it returns length of an string. It stores data does not perform any action hence it is known as property.
 const firstName = "Vinay";
 const len = firstName.length;
