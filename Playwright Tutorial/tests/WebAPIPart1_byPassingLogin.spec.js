@@ -153,7 +153,4 @@ test('API integration for web testing tutorial', async function ({ page }) {
     const orderIDDetails = await page.locator('.col-text').textContent();
     expect(orderID.includes(orderIDDetails)).toBeTruthy();
 
-
-
-
 });
